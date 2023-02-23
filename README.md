@@ -1,11 +1,14 @@
 ## Docker - TheForest Dedicated Server
 
+Docker image for The Forest dedicated server
+
 [![Build Status](https://drone.justmiles.io/api/badges/justmiles/the-forest/status.svg)](https://drone.justmiles.io/justmiles/the-forest)
 
 ## Environment Variables
 
 | Environment Var               | Default Value     | Description                                                                                                                                   |
 | ----------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SERVER_STEAM_ACCOUNT`        | (blank)           | Account token created from the [Steam Game Server Account Management](https://steamcommunity.com/dev/managegameservers) using app ID `242760` |
 | `SERVER_IP`                   | `0.0.0.0`         | Server IP address - Note: If you have a router, this address is the internal address, and you need to configure ports forwarding              |
 | `SERVER_STEAM_PORT`           | `8766`            | Steam Communication Port - Note: If you have a router you will need to open this port.                                                        |
 | `SERVER_GAME_PORT`            | `27016`           | Game Communication Port - Note: If you have a router you will need to open this port.                                                         |
@@ -15,7 +18,6 @@
 | `ENABLE_VAC`                  | `off`             | Enable VAC (Valve Anti-cheat System at the server. Must be set off or on                                                                      |
 | `SERVER_PASSWORD`             | (blank)           | Server password. blank means no password                                                                                                      |
 | `SERVER_PASSWORD_ADMIN`       | (blank)           | Server administration password. blank means no password                                                                                       |
-| `SERVER_STEAM_ACCOUNT`        | (blank)           | Account token created from the [Steam Game Server Account Management](https://steamcommunity.com/dev/managegameservers) using app ID `242760` |
 | `SERVER_AUTOSAVE_INTERVAL`    | `30`              | Time between server auto saves in minutes - The minumum time is 15 minutes, the default time is 30                                            |
 | `DIFFICULTY`                  | `Normal`          | Game difficulty mode. Must be set to Peaceful Normal or Hard                                                                                  |
 | `INIT_TYPE`                   | `Continue`        | New or continue a game. Must be set to New or Continue                                                                                        |
