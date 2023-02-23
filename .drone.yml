@@ -14,11 +14,3 @@ steps:
     auto_tag: true
     cache_from:
       - "justmiles/the-forest:latest"
-
-trigger:
-  branch:
-  - master
-  event:
-  - custom
-  - push
-  - tag
